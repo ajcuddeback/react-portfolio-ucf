@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import headShot from '../images/Head-shot.jpg';
-import resume from "../PDF's/Austin's-Resume.pdf";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faDownload} from '@fortawesome/free-solid-svg-icons';
 import {device} from '../devices';
 
 const About = () => {
@@ -31,22 +28,6 @@ const About = () => {
                                 on continuous learning and engaging in my community to give back in the field of web
                                 development.</h3>
                         <br />
-                        <h3>My skills:</h3>
-                        <br/>
-                        <ul>
-                            <li className="front-end"> <p> <u> Front End Technologies </u></p> <br/> HTML5 | CSS | Javascript | jQuery | Bootstrap | GSAP | Animations | Handlebars | React.js | Styled Components | React Hooks
-                            </li>
-                            <li className="back-end" ><p> <u> Back End Technologies </u></p> <br/> Node.js | Express.js | Stripe.js | API's | MySQL | SQLite | Sequelize | bcrypt |
-                                cookies | express-session | dotenv</li>
-                        </ul>
-                        <br/>
-                        <div className="">
-                            <h3>Click to download my resume!</h3>
-                        </div>
-                        <form method="get" action={resume} target="_blank"
-                            className="download-button-container">
-                            <button className="btn"><FontAwesomeIcon icon={faDownload} />   Download</button>
-                        </form>
                     </div>
                 </div>
             </article>
@@ -62,28 +43,8 @@ const StyledAbout = styled.section `
         margin: 0 auto;
     }
 
-    .download-button-wrapper {
-        width: 100%;
-        align-self: center;
-        margin-left: 4rem;
-    }
-    .front-end {
-        margin-bottom: 1rem;
-    }
-
-    .front-end,
-    .back-end {
-        font-size: 1rem;
-    }
-
     h3 {
         text-align: center;
-        margin-top: 1rem;
-    }
-
-    form {
-        display: flex;
-        justify-content: center;
         margin-top: 1rem;
     }
 
@@ -121,9 +82,6 @@ const StyledAbout = styled.section `
         }
         img {
             height: 350px;
-        }
-        .download-button-wrapper {
-            margin-left: 0;
         }
     }
     @media ${device.mobileM} {

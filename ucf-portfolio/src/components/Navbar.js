@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {device} from '../devices';
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
 
 const Navbar = ({navElement, navElements, setNavElements, id}) => {
@@ -25,7 +29,7 @@ const Navbar = ({navElement, navElements, setNavElements, id}) => {
 
     
     return (
-        <StyledLi><a href={navElement.href} className={`red-border ${navElement.selected ? 'selected' : ''}`} onClick={navSelectHandler}>{navElement.name} </a></StyledLi>
+        <StyledLi><Link to={`/${navElement.href}`} className={`red-border ${navElement.selected ? 'selected' : ''}`} onClick={navSelectHandler}>{navElement.name} </Link></StyledLi>
     )
 }
 
