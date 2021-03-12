@@ -2,47 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 import {device} from '../devices';
 
-const Navbar = () => {
+
+const Navbar = ({navElement, navElements, setNavElements, id}) => {
+
+    const navSelectHandler = () => {
+        const newnavElements = navElements.map((navElement) => {
+            if(navElement.id === id) {
+                return {
+                    ...navElement,
+                    selected: true
+                }
+            } else {
+                return {
+                    ...navElement,
+                    selected: false
+                }
+            }
+        });
+
+        setNavElements(newnavElements);
+    }
+
+    
     return (
-        <StyledHeader>
-            <h1><a href="/react-portfolio">AustinWebDev</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#about" className="red-border">About Me</a></li>
-                    <li><a href="#work" className="red-border">My Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </StyledHeader>
+        <StyledLi><a href={navElement.href} className={`red-border ${navElement.selected ? 'selected' : ''}`} onClick={navSelectHandler}>{navElement.name} </a></StyledLi>
     )
 }
 
-const StyledHeader = styled.header `
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 30px 30px;
-    z-index: -1;
+const StyledLi = styled.li `
 
-    h1 {
-        border: 2px solid blue;
-        padding-top: 5px;
-        padding-left: 3px;
-        border-radius: 5px;
-        font-size: 55px;
-        text-shadow: 1px 1px blue;
-        animation: headGlow 5s 3.6s;
+    .selected {
         box-shadow: 2px 2px 15px 1px blue;
-        font-family: Neon;
-    }
-
-    ul {
-        margin-top: 23px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none
+        transition: 1s;
     }
 
     a {
@@ -58,35 +49,26 @@ const StyledHeader = styled.header `
         font-size: 1.55rem;
     }
 
-    @media ${device.laptop} {
-        flex-direction: column;
-        align-items: center;
-    }
+
     @media ${device.tablet} {
-        h1 {
-            font-size: 40px;
-        }
         nav ul li a {
             font-size: 1.2rem;
             padding: 10px 15px;
         }
     }
     @media ${device.mobileL} {
-        h1 {
-            font-size: 35px;
-        }
         nav ul li a {
             font-size: 1rem;
             padding: 10px 15px;
         }
     }
     @media ${device.mobileM} {
-        
         nav ul li a {
             font-size: .8rem;
             padding: 10px 15px;
         }
     }
 `
+
 
 export default Navbar;
