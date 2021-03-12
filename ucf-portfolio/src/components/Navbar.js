@@ -29,7 +29,7 @@ const Navbar = ({navElement, navElements, setNavElements, id}) => {
 
     
     return (
-        <StyledLi><Link to={`/${navElement.href}`} className={`red-border ${navElement.selected ? 'selected' : ''}`} onClick={navSelectHandler}>{navElement.name} </Link></StyledLi>
+        <StyledLi><Link to={`/react-portfolio-ucf/${navElement.href}`} className={`red-border ${navElement.selected ? 'selected' : ''}`} onClick={navSelectHandler}>{navElement.name} </Link></StyledLi>
     )
 }
 

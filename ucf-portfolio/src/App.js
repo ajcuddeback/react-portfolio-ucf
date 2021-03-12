@@ -30,11 +30,11 @@ function App() {
         <GlobalStyle />
         <Header navElements={navElements} setNavElements={setNavElements} />
         <Switch>
-          <Route exact path='/' component={About}></Route>
-          <Route path='/about' component={About}></Route>
-          <Route  path='/works' component={Works}></Route>
-          <Route  path='/contact' component={Contact}></Route>
-          <Route  path='/resume' component={Resume}></Route>
+          <Route exact path='/react-portfolio-ucf/' component={About}></Route>
+          <Route path='/react-portfolio-ucf/about' component={About}></Route>
+          <Route  path='/react-portfolio-ucf/works' component={Works}></Route>
+          <Route  path='/react-portfolio-ucf/contact' component={Contact}></Route>
+          <Route  path='/react-portfolio-ucf/resume' component={Resume}></Route>
         </Switch>
         <Footer />
       </div>
