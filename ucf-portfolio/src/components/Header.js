@@ -68,9 +68,19 @@ const StyledHeader = styled.header `
         h1 {
             font-size: 40px;
         }
+        nav ul li {
+            margin-top: 1.5rem;
+        }
         nav ul li a {
             font-size: 1.2rem;
             padding: 10px 15px;
+        }
+        ul {
+            flex-direction: column;
+            
+        }
+        nav {
+            align-self: flex-start
         }
     }
     @media ${device.mobileL} {

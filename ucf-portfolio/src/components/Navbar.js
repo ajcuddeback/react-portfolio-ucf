@@ -56,19 +56,19 @@ const StyledLi = styled.li `
 
     @media ${device.tablet} {
         nav ul li a {
-            font-size: 1.2rem;
+            font-size: 1rem;
             padding: 10px 15px;
         }
     }
     @media ${device.mobileL} {
         nav ul li a {
-            font-size: 1rem;
+            font-size: .5rem;
             padding: 10px 15px;
         }
     }
     @media ${device.mobileM} {
         nav ul li a {
-            font-size: .8rem;
+            font-size: .4rem;
             padding: 10px 15px;
         }
     }

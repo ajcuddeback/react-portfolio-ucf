@@ -12,14 +12,19 @@ const Contact = () => {
                 <form action="https://formspree.io/f/mvovqazn" target="_blank" method="POST">
                     <label>
                     Your email:
-                        <input type="text" name="_replyto"></input>
+                        <input type="text" name="_replyto" required></input>
                     </label>
                     <label>
                     Your message:
-                        <textarea name="message"></textarea>
+                        <textarea name="message" required></textarea>
                     </label>
                     <button type="submit">Send</button>
                 </form>
+                <br/>
+                <br/>
+                <h2>You can also reach me at:</h2>
+                <h3>Phone: (863) 245-3982</h3>
+                <h3>Email: ajcuddeback@gmail.com</h3>
             </div>
         </StyledContact>
     )

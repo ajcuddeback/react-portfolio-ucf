@@ -11,9 +11,9 @@ const Resume = () => {
             <h3>My skills:</h3>
             <br/>
             <ul>
-                <li className="front-end"> <p> <u> Front End Technologies </u></p> <br/> HTML5 | CSS | Javascript | jQuery | Bootstrap | GSAP | Animations | Handlebars | React.js | Styled Components | React Hooks</li>
-                <li className="back-end" ><p> <u> Back End Technologies </u></p> <br/> Node.js | Express.js | Stripe.js | API's | MySQL | SQLite | Sequelize | bcrypt |
-                    cookies | express-session | dotenv</li>
+                <h3 className="front-end"> <p> <u> Front End Technologies </u></p> <br/> HTML5 | CSS | Javascript | jQuery | Bootstrap | GSAP | Animations | Handlebars | React.js | Styled Components | React Hooks</h3>
+                <h3 className="back-end" ><p> <u> Back End Technologies </u></p> <br/> Node.js | Express.js | Stripe.js | API's | MySQL | SQLite3 | Sequelize | bcrypt |
+                    cookies | express-session | dotenv</h3>
             </ul>
             <br/>
             <div className="">
@@ -30,11 +30,11 @@ const Resume = () => {
 
 const StyledResume = styled.section `
 
-    .about-content-wrapper {
-        display: flex;
-        width:50%;
-        margin: 0 auto;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
 
     .download-button-wrapper {
         width: 100%;
