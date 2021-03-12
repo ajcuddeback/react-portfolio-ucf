@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 // Global Style
 import GlobalStyle from './components/GlobalStyles';
 
-import './styles.css'
+import './index.css'
 
 function App() {
   return (

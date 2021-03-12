@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Neon";
+  src: url("./fonts/Neoneon.otf") format("opentype");
+}
+
+@keyframes headGlow {
+  from {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes headingUp {
+  from {
+    top: 45vh;
+  }
+  to {
+    top: 40vh;
+  }
+}
+
+@keyframes moveIntro {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(3000px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  @keyframes headingUp {
+    from {
+      top: 45vh;
+    }
+    to {
+      top: 35vh;
+    }
+  }
+}
