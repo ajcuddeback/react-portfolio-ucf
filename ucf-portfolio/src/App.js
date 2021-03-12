@@ -30,7 +30,7 @@ function App() {
         <GlobalStyle />
         <Header navElements={navElements} setNavElements={setNavElements} />
         <Switch>
-          <Route exact path='/react-portfolio-ucf' component={About}></Route>
+          <Route exact path='/' component={About}></Route>
           <Route path='/about' component={About}></Route>
           <Route  path='/works' component={Works}></Route>
           <Route  path='/contact' component={Contact}></Route>
