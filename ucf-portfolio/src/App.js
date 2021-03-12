@@ -8,7 +8,6 @@ import {
 // Import components
 import Intro from './components/Intro';
 import Header from './components/Header';
-import Hero from './components/Hero';
 import Resume from './components/Resume';
 import About from './components/About';
 import Works from './components/Works';
