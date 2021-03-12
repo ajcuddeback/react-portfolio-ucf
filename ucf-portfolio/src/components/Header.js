@@ -12,7 +12,7 @@ const Header = ({navElements, setNavElements}) => {
 
     return (
         <StyledHeader>
-            <h1><Link to="/">AustinWebDev</Link></h1>
+            <h1><Link to="/react-portfolio-ucf">AustinWebDev</Link></h1>
             <nav>
                 <ul>
                     {navElements.map(navElement => (<Navbar navElement={navElement} navElements={navElements} setNavElements={setNavElements} id={navElement.id} key={navElement.id}></Navbar>))}
