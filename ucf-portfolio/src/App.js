@@ -30,10 +30,11 @@ function App() {
         <GlobalStyle />
         <Header navElements={navElements} setNavElements={setNavElements} />
         <Switch>
+          <Route exact path='/' component={About}></Route>
           <Route exact path='/about' component={About}></Route>
-          <Route path='/works' component={Works}></Route>
-          <Route path='/contact' component={Contact}></Route>
-          <Route path='/resume' component={Resume}></Route>
+          <Route exact path='/works' component={Works}></Route>
+          <Route exact path='/contact' component={Contact}></Route>
+          <Route exact path='/resume' component={Resume}></Route>
         </Switch>
         <Footer />
       </div>

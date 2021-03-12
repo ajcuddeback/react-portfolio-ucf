@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {device} from '../devices';
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
 import Navbar from './Navbar'
 
@@ -8,7 +12,7 @@ const Header = ({navElements, setNavElements}) => {
 
     return (
         <StyledHeader>
-            <h1><a href="/react-portfolio">AustinWebDev</a></h1>
+            <h1><Link to="/">AustinWebDev</Link></h1>
             <nav>
                 <ul>
                     {navElements.map(navElement => (<Navbar navElement={navElement} navElements={navElements} setNavElements={setNavElements} id={navElement.id} key={navElement.id}></Navbar>))}
